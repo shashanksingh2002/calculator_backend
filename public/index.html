@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalvium|GET Request</title>
+</head>
+<body>
+    <h1>Request Type and Response</h1>
+    <h1>Math Operations Table</h1>
+    <p>Note: The request parameter query can be as long as the user wants and can contain multiple operations.</p>
+    <p>The response will be in JSON format. If there is an error in the query, an error message will be generated.</p>
+    <table>
+        <tr>
+            <th>Request Type</th>
+            <th>Request Parameter</th>
+            <th>Response Type</th>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><code>3/plus/5</code></td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><code>5/minus/4</code></td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><code>3/into/3</code></td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><code>5/divide/3</code></td>
+            <td>1.6666666666666667</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><code>4/intdiv/5</code></td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><code>4/mod/4</code></td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><code>4/pow/5</code></td>
+            <td>1024</td>
+        </tr>
+    </table>
+</body>
+</html>
