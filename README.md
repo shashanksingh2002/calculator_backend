@@ -13,7 +13,7 @@
     <h2>Getting Started</h2>
     <ol>
         <li>Clone this repository:</li>
-        <code>git clone https://github.com/your-username/calculator-backend.git</code>
+        <code>git clone https://github.com/shashanksingh2002/calculator-backend.git</code>
         <li>Navigate to the project directory:</li>
         <code>cd calculator-backend</code>
         <li>Install dependencies:</li>
