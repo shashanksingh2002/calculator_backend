@@ -28,25 +28,32 @@ connectToDb((err) => {
 
 //routes
 
+//sends html response of last 20 operations and answer on the server
+app.get('/history', async(req,res) => {
+    try{
+        const data = await getHistory(req);
+        res.send(data)
+    }
+    catch(err){
+        console.log("History route",err);
+        throw err;
+    }
+});
+
 //sends html response of all possible routes
 app.get('/', (req,res) => {
-    return res.sendFile('index.html');
-});
-
-
-//handling fevicon request
-app.get('/favicon.ico', (req, res) => {
-    return res.status(204).end();
-});
-
-//sends html response of last 20 operations and answer on the server
-app.get('/history', (req,res) => {
-    return getHistory(req,res);
+    res.sendFile('index.html');
 });
 
 //sends json response of calculated answer
-app.get('/*', (req,res) => {
-    return calculate(req,res);
+app.get('/*', async(req,res) => {
+    try{
+        const data = await calculate(req);
+        res.json(data);
+    } catch(err) {
+        console.log('/*',err);
+        throw err;
+    }
 });
 
 

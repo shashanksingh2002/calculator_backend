@@ -46,10 +46,8 @@ module.exports = {
                 "time": Date.now()
             };
     
-            const result = await db.collection('history').insertOne(data);
-            return result;
+            await db.collection('history').insertOne(data);
         } catch (err) {
-            console.error(err);
             throw err;
         }
     }    

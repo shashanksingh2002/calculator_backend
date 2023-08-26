@@ -1,10 +1,10 @@
 const { databaseHistory } = require('../backend/database');
 
 module.exports = {
-    getHistory: async(req,res) => {
+    getHistory: async(req) => {
         const historyData = await databaseHistory();
         if(!historyData.length){
-            res.send('No history');
+            return `<p>No History</p>`;
         }
         let html = ``;
         historyData.forEach((element,idx) => {
@@ -16,6 +16,6 @@ module.exports = {
             `;
             html += tempHtml;
         });
-        res.send(html);
+        return html;
     }
 }
