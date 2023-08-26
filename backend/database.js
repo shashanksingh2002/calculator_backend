@@ -31,7 +31,7 @@ module.exports = {
     historyUpdate: async (arr, ans) => {
         try {
             const count = await db.collection('history').countDocuments({});
-            if (count > 20) {
+            if (count >= 20) {
                 const oldestDocument = await db.collection('history')
                                                .findOne({}, { sort: { time: 1 } });
     
